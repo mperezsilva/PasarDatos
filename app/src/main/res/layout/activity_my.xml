@@ -1,0 +1,65 @@
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="230dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nombre"
+            android:id="@+id/tvNombreA" />
+
+        <EditText
+            android:layout_width="142dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/etNombreA" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/telefono"
+            android:id="@+id/tvTelA" />
+
+        <EditText
+            android:layout_width="145dp"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:id="@+id/etTelA" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/anadir"
+            android:id="@+id/btnAñadir" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nombre"
+            android:id="@+id/tvNombreE" />
+
+        <EditText
+            android:layout_width="142dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/etNombreE" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/editar"
+            android:id="@+id/btnEditar" />
+    </LinearLayout>
+
+</LinearLayout>
