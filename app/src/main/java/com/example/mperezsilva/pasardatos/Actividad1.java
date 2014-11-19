@@ -48,25 +48,22 @@ public class Actividad1 extends Activity {
             public void onClick(View v) {
                 EditText ne = (EditText) findViewById(R.id.etNombreE);
                 String nom = ne.getText().toString();
-                /*Intent i = new Intent(Actividad1.this, Actividad2.class);
-                //Penha p1 = new Penha("Pepe",12345);
-                //p1 = ap.get(0);
-                i.putExtra("persona", new Penha("Pepe",12345));
-                startActivityForResult(i, 1);*/
                 if (nom == "") {
                     showToast("Introduce un nombre");
                 } else {
+                    Boolean nomEx = false;
                     for (Penha p1 : ap) {
                         showToast(p1.getNombre());
                         if (p1.getNombre().toString().equalsIgnoreCase(nom)) {
                             showToast("existe");
+                            nomEx = true;
                             Intent i = new Intent(Actividad1.this, Actividad2.class);
                             i.putExtra("persona", new Penha(p1.getNombre(), p1.getTel()));
-
                             startActivityForResult(i, 1);
-                        } else {
-                            showToast("Penha no encontrada");
                         }
+                    }
+                    if (nomEx == true) {
+                        showToast("Peña no encontrada");
                     }
                 }
             }

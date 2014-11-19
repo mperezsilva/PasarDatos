@@ -36,7 +36,7 @@ public class Actividad2 extends Activity {
                 Intent i=new Intent();
                 Bundle reci=new Bundle();
                 reci.putString("largo",largo);
-                reci.putString("mensaje","Penha cambiada");
+                reci.putString("mensaje","Peña cambiada");
                 reci.putSerializable("peña",p);
                 i.putExtras(reci);
                 setResult(RESULT_OK, i);
