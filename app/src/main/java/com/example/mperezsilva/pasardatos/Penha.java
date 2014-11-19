@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * Created by mperezsilva on 7/11/14.
  */
-public class Penha implements Serializable{
+public class Penha implements Serializable {
     private String nombre;
     private int tel;
 
@@ -33,4 +33,8 @@ public class Penha implements Serializable{
         this.tel = tel;
     }
 
+    @Override
+    public String toString() {
+        return nombre + " : " + tel;
+    }
 }

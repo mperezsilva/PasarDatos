@@ -23,7 +23,8 @@ public class Actividad1 extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my);
         Button btnA = (Button) findViewById(R.id.btnAñadir);
-        Button btnE = (Button) findViewById(R.id.btnEditar);
+        //Button btnE = (Button) findViewById(R.id.btnEditar);
+        Button btnM = (Button) findViewById(R.id.btnLista);
         ap = new ArrayList<Penha>();
         btnA.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,7 +44,7 @@ public class Actividad1 extends Activity {
                 }
             }
         });
-        btnE.setOnClickListener(new View.OnClickListener() {
+        /*btnE.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 EditText ne = (EditText) findViewById(R.id.etNombreE);
@@ -67,11 +68,23 @@ public class Actividad1 extends Activity {
                     }
                 }
             }
+        });*/
+        btnM.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                if(ap==null){
+                    showToast("No hay Peña");
+                }else{
+                    Intent i = new Intent(Actividad1.this, MostrarLista.class);
+                    i.putExtra("array", ap);
+                    startActivityForResult(i, 1);
+                }
+            }
         });
     }
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        Penha p = (Penha) data.getExtras().getSerializable("peña");
+        /*Penha p = (Penha) data.getExtras().getSerializable("peña");
         String n = data.getExtras().getString("largo");
         for (Penha p1 : ap) {
             showToast(p1.getNombre());
@@ -82,7 +95,9 @@ public class Actividad1 extends Activity {
                 showToast(res);
                 showToast("La peña " + n + " " + "cambio a " + p1.getNombre() + " " + p1.getTel());
             }
-        }
+        }*/
+        ap= (ArrayList<Penha>) data.getExtras().getSerializable("array");
+        showToast("Lista actualizada");
     }
 
 
