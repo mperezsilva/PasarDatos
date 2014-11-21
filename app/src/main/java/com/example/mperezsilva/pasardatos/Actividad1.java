@@ -69,12 +69,12 @@ public class Actividad1 extends Activity {
                 }
             }
         });*/
-        btnM.setOnClickListener(new View.OnClickListener(){
+        btnM.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(ap==null){
+                if (ap == null) {
                     showToast("No hay Peña");
-                }else{
+                } else {
                     Intent i = new Intent(Actividad1.this, MostrarLista.class);
                     i.putExtra("array", ap);
                     startActivityForResult(i, 1);
@@ -96,8 +96,10 @@ public class Actividad1 extends Activity {
                 showToast("La peña " + n + " " + "cambio a " + p1.getNombre() + " " + p1.getTel());
             }
         }*/
-        ap= (ArrayList<Penha>) data.getExtras().getSerializable("array");
-        showToast("Lista actualizada");
+        if (resultCode == RESULT_OK) {
+            ap = (ArrayList<Penha>) data.getExtras().getSerializable("array");
+            showToast("Lista actualizada");
+        }
     }
 
 
