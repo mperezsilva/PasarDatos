@@ -3,12 +3,14 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:weightSum="1">
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="fill_parent"
-        android:layout_height="211dp">
+        android:layout_height="211dp"
+        android:layout_weight="1.17">
 
         <TextView
             android:layout_width="wrap_content"
@@ -43,6 +45,12 @@
             android:layout_height="wrap_content"
             android:text="@string/mostrar"
             android:id="@+id/btnLista" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/borrar"
+            android:id="@+id/btnBorrar" />
     </LinearLayout>
 
 </LinearLayout>

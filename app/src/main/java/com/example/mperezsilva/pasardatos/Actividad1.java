@@ -27,6 +27,7 @@ public class Actividad1 extends Activity {
         Button btnA = (Button) findViewById(R.id.btnAñadir);
         //Button btnE = (Button) findViewById(R.id.btnEditar);
         Button btnM = (Button) findViewById(R.id.btnLista);
+        Button btnB = (Button) findViewById(R.id.btnBorrar);
         ap = new ArrayList<Penha>();
         btnA.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,6 +44,21 @@ public class Actividad1 extends Activity {
                     showToast("Penha añadida");
                     na.setText("");
                     ta.setText("");
+                }
+            }
+        });
+
+        //Boton Borrar para examen
+
+        btnB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (ap == null) {
+                    showToast("No hay Peña");
+                } else {
+                    Intent i = new Intent(Actividad1.this, ActivityBorrar.class);
+                    i.putExtra("array", ap);
+                    startActivityForResult(i, 2);
                 }
             }
         });

@@ -12,5 +12,7 @@
     <string name="title_activity_actividad2">Actividad2</string>
     <string name="title_activity_mostrar_lista">MostrarLista</string>
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_activity_borrar">ActivityBorrar</string>
+    <string name="borrar">Elige el contacto a borrar</string>
 
 </resources>
